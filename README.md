@@ -34,11 +34,12 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-I wasn't quite sure how to work with UIKit. I stumbled around a bit before I could get the program working correctly. I also couldnt get the UIStepper working but thanks to the documentation, I was able to make it work. Sadly, this took about two hours, so I was unable to implement anything extra.
+I wasn't quite sure how to work with UIKit. I stumbled around a bit before I could get the program working correctly. I also couldnt get the UIStepper 
+working but thanks to the documentation, I was able to make it work. Sadly, this took about two hours, so I was unable to implement anything extra.
 
-Basic Application: 2 hours
-Design : 2 hours
-Extra: 3 hours
+Basic Application - 2 hours
+Design - 2 hours
+Extra - 3 hours
 
 ## License
 
