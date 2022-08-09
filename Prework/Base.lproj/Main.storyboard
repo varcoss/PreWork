@@ -30,7 +30,7 @@
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" systemColor="labelColor"/>
+                                <color key="shadowColor" red="0.80692020880000004" green="1" blue="0.87336527829999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uDH-GP-nHf">
                                 <rect key="frame" x="274" y="321" width="96" height="27"/>
@@ -40,15 +40,12 @@
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" systemColor="systemRedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.00" borderStyle="roundedRect" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="lp5-3n-fMi">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.00" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="lp5-3n-fMi">
                                 <rect key="frame" x="95" y="116" width="223" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
-                                <connections>
-                                    <action selector="eraseText:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="AS4-NN-LjA"/>
-                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QY0-QO-Qc0">
                                 <rect key="frame" x="273" y="278" width="96" height="33"/>
@@ -56,7 +53,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" systemColor="systemMintColor"/>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" systemColor="labelColor"/>
+                                <color key="shadowColor" red="0.80692020880000004" green="1" blue="0.87336527829999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zW3-ya-393">
                                 <rect key="frame" x="19" y="171" width="374" height="32"/>
@@ -71,9 +68,12 @@
                                     <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="zHq-hn-nii"/>
                                 </connections>
                             </segmentedControl>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="cRt-U0-ryT">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" maximumValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="cRt-U0-ryT">
                                 <rect key="frame" x="159" y="229" width="94" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="increasePercentage:" destination="BYZ-38-t0r" eventType="valueChanged" id="FWL-dI-RnK"/>
+                                </connections>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jpg-Ds-onc">
                                 <rect key="frame" x="104" y="321" width="50" height="27"/>
@@ -104,7 +104,7 @@
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" systemColor="labelColor"/>
+                                <color key="shadowColor" red="0.80692020880000004" green="1" blue="0.87336527829999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -112,6 +112,7 @@
                     </view>
                     <connections>
                         <outlet property="billAmountTextField" destination="lp5-3n-fMi" id="Pfp-Xi-46e"/>
+                        <outlet property="increaseLabel" destination="cRt-U0-ryT" id="9HL-Zz-7S4"/>
                         <outlet property="tipAmountLabel" destination="QY0-QO-Qc0" id="qFs-Um-TuI"/>
                         <outlet property="tipControl" destination="zW3-ya-393" id="xKT-bg-zGW"/>
                         <outlet property="totalLabel" destination="uDH-GP-nHf" id="hIg-Nh-QOE"/>
@@ -123,9 +124,6 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemMintColor">
             <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
